@@ -1,0 +1,147 @@
+html, body {height: 100%;}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(../images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    background-position-y: 125%;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    margin: 0;
+}
+h1 { 
+    color: hsl(229, 57%, 11%);
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0;
+}
+p {
+    color: #fff;
+    opacity: 75%;
+    margin-top: 0;
+}
+.attribution { font-size: 11px; text-align: center; padding-top: 1rem; color: hsl(229, 7%, 55%);}
+.attribution a { color: hsl(228, 45%, 44%); }
+.available {
+    color: hsl(229, 7%, 55%);
+    font-size: 13px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 32px;
+    margin-left: 8px;
+}
+.capacity-bar {
+    background-color: hsl(228, 46%, 19%);
+    height: 13px;
+    border-radius: 9px;
+    padding: 3px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.capacity-bar::after {
+    content: '';
+    display: block;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    width: 75%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+.capacity-left {
+    width: 8rem;
+    border-radius: 0.5rem;
+    background: #fff;
+    padding: 16px 24px;
+    position: relative;
+    float: right;
+    right: 32px;
+}
+.capacity-left:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 18px solid transparent;
+    border-right: 18px solid #fff;
+    border-top: 18px solid #fff;
+    border-bottom: 18px solid transparent;
+    right: 0px;
+    bottom: -18px;
+}
+.container {
+    display: flex;
+    height: 11.75rem;
+}
+.dot {
+    background-color: #fff;
+    border-radius: 100%;
+    right: 26%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+.fylo, .storage {
+    background-color: hsl(228, 56%, 26%);
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+.fylo {
+    border-top-right-radius: 5rem;
+    margin-right: 2rem;
+    width: 17.5rem;
+}
+.empty{float: left;}
+.full {float: right;}
+.empty, .full {
+    font-weight: 700;
+    font-size: 13px;
+    margin-top: 8px;
+}
+.icon {
+    margin: auto;
+    padding: 0.125rem;
+}
+.icons div {
+    background-color: hsl(229, 57%, 11%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    display: flex;
+}
+.icons {
+    display: flex;
+    margin-top: 2rem;
+}
+.middle-icon {margin: 0 1rem;}
+.storage {
+    margin-top: 3rem;
+    width: 30rem;
+    height: 4.75rem;
+}
+.used {font-weight: 700;}
+@media screen and (max-width: 948px) {
+    body {
+        background-image: url(../images/bg-mobile.png);
+        background-size: cover;
+        background-position: 0;
+    }
+    .attribution { margin-top: 3rem;}
+    .capacity-left {
+        position: absolute;
+        bottom: -2rem;
+        right: 5.5rem;
+    }
+    .capacity-left:before {border: 0;}
+    .container {display: initial;}
+    .fylo {margin: 0;}
+    .storage {
+        text-align: center;
+        width: 17.5rem;
+        height: 6rem;
+    }
+    .storage-left {position: relative;}
+}
