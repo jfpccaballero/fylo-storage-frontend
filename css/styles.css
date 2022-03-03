@@ -8,7 +8,6 @@ body {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
-    background-position-y: 125%;
     font-family: "Raleway", sans-serif;
     font-size: 15px;
     margin: 0;
@@ -127,7 +126,6 @@ p {
     body {
         background-image: url(../images/bg-mobile.png);
         background-size: cover;
-        background-position: 0;
     }
     .attribution { margin-top: 3rem;}
     .capacity-left {
